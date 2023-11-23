@@ -17,7 +17,7 @@
       scannerHome = tool 'sonar-scanner-devops'
     }
     steps{
-    withSonarQubeEnv('sonar-scanner-devopsr') { // If you have configured more than one global server connection, you can specify its name
+    withSonarQubeEnv('sonar-scanner-devops') { // If you have configured more than one global server connection, you can specify its name
       sh "${scannerHome}/bin/sonar-scanner"
     }
     }
