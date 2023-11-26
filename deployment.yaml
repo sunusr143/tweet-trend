@@ -17,7 +17,7 @@ spec:
       - name: jfrog-cred
       containers:
       - name:  tweet
-        image: sunu.jfrog.io/sunu-docker/trend:2.1.2
+        image: sunu.jfrog.io/sunu-docker/trend:2.1.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

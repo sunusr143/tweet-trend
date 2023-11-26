@@ -46,7 +46,7 @@
       steps {
         script {
              def imageName = 'sunu.jfrog.io/sunu-docker/trend'
-             def version   = '2.1.2'
+             def version   = '2.1.3'
                def registry = 'https://sunu.jfrog.io'
            echo '<--------------- Docker Build Started --------------->'
            app = docker.build(imageName+":"+version)
