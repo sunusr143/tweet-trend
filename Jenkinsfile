@@ -81,11 +81,12 @@
         //         }
         //     }   
         // }
-   def imageName = 'sunu.jfrog.io/sunu-docker/trend'
-   def version   = '2.1.2'
+
     stage(" Docker Build ") {
       steps {
         script {
+             def imageName = 'sunu.jfrog.io/sunu-docker/trend'
+   def version   = '2.1.2'
            echo '<--------------- Docker Build Started --------------->'
            app = docker.build(imageName+":"+version)
            echo '<--------------- Docker Build Ends --------------->'
