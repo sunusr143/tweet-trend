@@ -68,7 +68,13 @@
         }
     }
 
-
+stage (" Deployto kube"){
+  steps{
+    script{
+      sh '.\deploy.sh'
+    }
+  }
+}
 
  }
    }
