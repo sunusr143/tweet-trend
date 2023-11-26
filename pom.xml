@@ -117,7 +117,7 @@
 
 	<distributionManagement>
 		<repository>
-			<id>dev</id>
+			<! --<id>dev</id>-->
 			<url>file://jarstaging</url>
 		</repository>
 	</distributionManagement>
