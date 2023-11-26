@@ -46,7 +46,8 @@
       steps {
         script {
              def imageName = 'sunu.jfrog.io/sunu-docker/trend'
-   def version   = '2.1.2'
+             def version   = '2.1.2'
+               def registry = 'https://sunu.jfrog.io'
            echo '<--------------- Docker Build Started --------------->'
            app = docker.build(imageName+":"+version)
            echo '<--------------- Docker Build Ends --------------->'
@@ -57,8 +58,9 @@
             stage (" Docker Publish "){
         steps {
             script {
+                def registry = 'https://sunu.jfrog.io'
                echo '<--------------- Docker Publish Started --------------->'  
-                docker.withRegistry(registry, 'artifactory_token'){
+                docker.withRegistry(registry, 'jenkins-jfrog'){
                     app.push()
                 }    
                echo '<--------------- Docker Publish Ended --------------->'  
